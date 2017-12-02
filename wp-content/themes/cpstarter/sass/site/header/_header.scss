@@ -40,3 +40,17 @@
     font-weight: 100;
 }
 
+@media screen and (min-width: $query-medium) {
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .site-branding {
+            width: 35%;
+        }
+
+        .site-navigation {
+            width: 55%;
+        }
+    }
