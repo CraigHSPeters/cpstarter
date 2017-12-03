@@ -24,6 +24,12 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cpstarter' ); ?></a>
 
+	<?php if ( get_header_image() ) : ?>
+	<figure class="header_image">
+		<img alt="" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>">
+	</figure><!-- .header-image -->
+	<?php endif; // End header image check. ?>
+	
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
