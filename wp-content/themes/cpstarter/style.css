@@ -748,6 +748,16 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
+.header_image {
+	max-height: 60vh;
+	overflow: hidden;
+}
+
+.header_image img {
+	display: block;
+	width: 100vw;
+}
+
 .site-header {
 	position: relative;
 	padding: 1em;
