@@ -24,7 +24,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cpstarter' ); ?></a>
 
-	<?php if ( get_header_image() ) : ?>
+	<?php if ( get_header_image() && is_front_page() ) : ?>
 	<figure class="header_image">
 		<img alt="" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>">
 	</figure><!-- .header-image -->
