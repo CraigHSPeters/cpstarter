@@ -776,6 +776,12 @@ a:hover, a:active {
 	min-height: 65px;
 }
 
+.custom-logo-link img {
+	display: block;
+	height: 65px;
+	width: auto;
+}
+
 .site-title {
 	margin: 0;
 	padding: 0;
