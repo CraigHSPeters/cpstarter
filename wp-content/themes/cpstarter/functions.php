@@ -45,7 +45,7 @@ if ( ! function_exists( 'cpstarter_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Header', 'cpstarter' ),
-			'social' => esc_html__( 'Social Media Header', 'cpstarter' ),
+			'social' => esc_html__( 'Social Media Menu', 'cpstarter' ),
 		) );
 
 		/*
