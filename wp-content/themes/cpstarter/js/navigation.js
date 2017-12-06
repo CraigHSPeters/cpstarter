@@ -23,12 +23,15 @@
 			.attr( 'aria-expanded', 'true' )
 			.find( '.screen-reader-text' )
 			.text( cpstarterScreenReaderText.collapse );
+		
 		// Set the active submenu initial state.
 		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
 
 		container.find( '.dropdown-toggle' ).click( function( e ) {
 			var _this = $( this ),
 				screenReaderSpan = _this.find( '.screen-reader-text' );
+				dropdownSymbol = _this.find( '.dropdown-symbol' );
+				dropdownSymbol.text ( dropdownSymbol.text() === '-' ? '+' : '-' );
 
 			e.preventDefault();
 			_this.toggleClass( 'toggled-on' );
