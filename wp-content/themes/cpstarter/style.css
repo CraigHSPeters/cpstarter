@@ -264,7 +264,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
+	color: #000;
 	font-family: "PT Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 	font-size: 18px;
 	font-size: 1.125rem;
@@ -516,15 +516,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #000;
 }
 
 a:visited {
-	color: purple;
+	color: #000;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: #b51c35;
 }
 
 a:focus {
@@ -586,7 +586,7 @@ a:hover, a:active {
 	clip: auto !important;
 	-webkit-clip-path: none;
 	        clip-path: none;
-	color: #21759b;
+	color: #000;
 	display: block;
 	font-size: 17.5px;
 	font-size: 1.09375rem;
