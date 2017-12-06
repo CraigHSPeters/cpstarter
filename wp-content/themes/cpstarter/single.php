@@ -23,7 +23,8 @@ get_header(); ?>
 				comments_template();
 			endif;
 
-			the_post_navigation();
+			cpstarter_post_navigation();
+
 
 		endwhile; // End of the loop.
 		?>
