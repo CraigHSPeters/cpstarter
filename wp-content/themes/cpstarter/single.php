@@ -17,6 +17,8 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'single' );
 
+			cpstarter_post_navigation();
+
 		endwhile; // End of the loop.
 		?>
 
