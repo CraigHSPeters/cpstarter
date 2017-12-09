@@ -22,7 +22,7 @@
 
 		if ( is_active_sidebar( 'sidebar-1 ') ) : ?>
 		<div class="entry-meta">
-			<?php mw_starter_posted_on(); ?>
+			<?php cpstarter_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -33,7 +33,7 @@
 	if ( !is_active_sidebar( 'sidebar-1 ') ) : ?>
 	<div class ="post-content__wrap">
 		<div class="entry-meta">
-			<?php mw_starter_posted_on(); ?>
+			<?php cpstarter_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<div class="post-content__body">
 		<?php
@@ -62,7 +62,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php mw_starter_entry_footer(); ?>
+		<?php cpstarter_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 
 	<?php
