@@ -11,7 +11,8 @@
 
 <article class="hentry" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php cpstarter_the_category_list(); ?>
+	<?php cpstarter_the_category_list(); ?>
+
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -19,15 +20,25 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) : ?>
+		if ( is_active_sidebar( 'sidebar-1 ') ) : ?>
 		<div class="entry-meta">
-			<?php cpstarter_posted_on(); ?>
+			<?php mw_starter_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
+<section class="post-content">
 
-	<section class="post-content">
+<?php
+	if ( !is_active_sidebar( 'sidebar-1 ') ) : ?>
+	<div class ="post-content__wrap">
+		<div class="entry-meta">
+			<?php mw_starter_posted_on(); ?>
+		</div><!-- .entry-meta -->
+		<div class="post-content__body">
+		<?php
+		endif; ?>
+
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(
@@ -51,21 +62,25 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php cpstarter_entry_footer(); ?>
+		<?php mw_starter_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 
 	<?php
+	if ( !is_active_sidebar( 'sidebar-1 ') ) : ?>
+	</div> <!-- .post-content__body -->
+	</div> <!-- .post-content__wrap -->
+	<?php endif; 
+	?>
+
+<?php
 	cpstarter_post_navigation();
 
-	// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) :
-			comments_template();
-		endif;
-	?>
-	</section><!-- .post-content --> 
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif; ?>
+	</section>
 
-	<?php
-	get_sidebar();
-	?>
+	<?php get_sidebar(); ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->
