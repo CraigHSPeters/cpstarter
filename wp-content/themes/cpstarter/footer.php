@@ -18,18 +18,7 @@
 		<nav class="social-menu">
 		<?php wp_nav_menu( array( 'theme_location' => 'social' ) ); ?>
 		</nav><!-- .social-menu -->
-
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cpstarter' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'cpstarter' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'cpstarter' ), 'cpstarter', '<a href="http://underscores.me/">CraigPeters</a>' );
-			?>
-		</div><!-- .site-info -->
+		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
